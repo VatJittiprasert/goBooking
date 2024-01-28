@@ -6,9 +6,9 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/VatJittiprasert/goBooking.git/pkg/config"
-	"github.com/VatJittiprasert/goBooking.git/pkg/handlers"
-	"github.com/VatJittiprasert/goBooking.git/pkg/render"
+	"github.com/VatJittiprasert/goBooking.git/internal/config"
+	"github.com/VatJittiprasert/goBooking.git/internal/handlers"
+	"github.com/VatJittiprasert/goBooking.git/internal/render"
 
 	"github.com/alexedwards/scs/v2"
 )
