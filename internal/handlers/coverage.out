@@ -1,0 +1,22 @@
+mode: set
+github.com/VatJittiprasert/goBooking.git/internal/handlers/handler.go:23.47,27.2 1 1
+github.com/VatJittiprasert/goBooking.git/internal/handlers/handler.go:30.33,32.2 1 1
+github.com/VatJittiprasert/goBooking.git/internal/handlers/handler.go:35.67,40.2 3 1
+github.com/VatJittiprasert/goBooking.git/internal/handlers/handler.go:43.68,55.2 5 1
+github.com/VatJittiprasert/goBooking.git/internal/handlers/handler.go:58.74,67.2 4 1
+github.com/VatJittiprasert/goBooking.git/internal/handlers/handler.go:70.78,72.16 2 1
+github.com/VatJittiprasert/goBooking.git/internal/handlers/handler.go:72.16,75.3 2 0
+github.com/VatJittiprasert/goBooking.git/internal/handlers/handler.go:77.2,90.19 6 1
+github.com/VatJittiprasert/goBooking.git/internal/handlers/handler.go:90.19,98.3 4 0
+github.com/VatJittiprasert/goBooking.git/internal/handlers/handler.go:100.2,101.66 2 1
+github.com/VatJittiprasert/goBooking.git/internal/handlers/handler.go:105.71,107.2 1 1
+github.com/VatJittiprasert/goBooking.git/internal/handlers/handler.go:110.69,112.2 1 1
+github.com/VatJittiprasert/goBooking.git/internal/handlers/handler.go:115.75,117.2 1 1
+github.com/VatJittiprasert/goBooking.git/internal/handlers/handler.go:120.79,125.2 3 1
+github.com/VatJittiprasert/goBooking.git/internal/handlers/handler.go:133.79,140.16 3 1
+github.com/VatJittiprasert/goBooking.git/internal/handlers/handler.go:140.16,142.3 1 0
+github.com/VatJittiprasert/goBooking.git/internal/handlers/handler.go:144.2,145.14 2 1
+github.com/VatJittiprasert/goBooking.git/internal/handlers/handler.go:149.70,151.2 1 1
+github.com/VatJittiprasert/goBooking.git/internal/handlers/handler.go:153.81,155.9 2 1
+github.com/VatJittiprasert/goBooking.git/internal/handlers/handler.go:155.9,160.3 4 1
+github.com/VatJittiprasert/goBooking.git/internal/handlers/handler.go:161.2,167.4 4 0
