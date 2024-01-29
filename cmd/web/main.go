@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/gob"
 	"fmt"
 	"log"
 	"net/http"
@@ -8,6 +9,7 @@ import (
 
 	"github.com/VatJittiprasert/goBooking.git/internal/config"
 	"github.com/VatJittiprasert/goBooking.git/internal/handlers"
+	"github.com/VatJittiprasert/goBooking.git/internal/models"
 	"github.com/VatJittiprasert/goBooking.git/internal/render"
 
 	"github.com/alexedwards/scs/v2"
@@ -20,10 +22,13 @@ var app config.AppConfig
 var session *scs.SessionManager
 
 func main() {
+	// what am I going to put in the session
+	gob.Register(models.Reservation{})
 
-	//change this to true when in production
-	app.InProduction = true
+	// change this to true when in production
+	app.InProduction = false
 
+	// set up the session
 	session = scs.New()
 	session.Lifetime = 24 * time.Hour
 	session.Cookie.Persist = true
@@ -34,24 +39,26 @@ func main() {
 
 	tc, err := render.CreateTemplateCache()
 	if err != nil {
-		log.Fatal("cannot create pemplate cache")
+		log.Fatal("cannot create template cache")
 	}
 
 	app.TemplateCache = tc
 	app.UseCache = false
 
 	repo := handlers.NewRepo(&app)
+	handlers.NewHandlers(repo)
 
 	render.NewTemplates(&app)
 
-	handlers.NewHandlers(repo)
-	fmt.Println(fmt.Sprintf("Starting application on port %s", portNumber))
+	fmt.Println(fmt.Sprintf("Staring application on port %s", portNumber))
+
 	srv := &http.Server{
 		Addr:    portNumber,
 		Handler: routes(&app),
 	}
 
 	err = srv.ListenAndServe()
-	log.Fatal(err)
-
+	if err != nil {
+		log.Fatal(err)
+	}
 }
